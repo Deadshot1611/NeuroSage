@@ -61,6 +61,10 @@ COMBO_THRESHOLD  = 45.68  # 80/20 weighted fusion threshold (zero-FN optimised)
 Q_THRESHOLD      = 30     # questionnaire-only threshold (raw score, 10–50)
 
 
+@app.route("/", methods=["GET"])
+def home():
+    return {"message": "Backend is running"}
+
 # ─────────────────────────────────────────────────────────────────────────────
 # HEALTH CHECK
 # ─────────────────────────────────────────────────────────────────────────────
