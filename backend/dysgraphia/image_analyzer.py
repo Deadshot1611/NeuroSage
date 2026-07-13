@@ -4,6 +4,7 @@ import torch
 import torch.nn.functional as F
 from PIL import Image
 from torchvision.transforms import Compose, ConvertImageDtype, Pad, Resize, PILToTensor
+from backend.dysgraphia.path import CHECKPOINTS
 from model import EncoderFactory  # <--- Changed from ResnetWrapper
 import os
 
@@ -39,10 +40,10 @@ class ImageAnalyzer:
             model_path = os.path.join('checkpoints', model_filename)
             # If not in checkpoints, check root (just in case)
             if not os.path.exists(model_path):
-                model_path = model_filename
+                model_path = CHECKPOINTS / model_filename
 
-            baseline_path = baseline_filename
-            
+            baseline_path = CHECKPOINTS / baseline_filename
+
             if not os.path.exists(model_path):
                 raise FileNotFoundError(f"Model file not found: {model_path}")
             if not os.path.exists(baseline_path):

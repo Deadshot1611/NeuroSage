@@ -1,10 +1,10 @@
 from pathlib import Path
 
-BASE = Path('.')
+BASE = Path(__file__).resolve().parent
 
 #? ML
 DEVICE = 'cuda:0'
-CHECKPOINTS = 'checkpoints'
+CHECKPOINTS = BASE / "checkpoints"
 
 #? IAM dataset
 IAM = BASE / 'IAM'
