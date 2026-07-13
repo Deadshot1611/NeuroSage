@@ -357,5 +357,10 @@ def get_reports():
 
 if __name__ == "__main__":
     init_db()
-    print("✓ Auth API starting on http://localhost:8002")
-    app.run(port=8002, debug=True)
+    port = int(os.environ.get("PORT", 8002))
+    print(f"✓ Auth API starting on port {port}")
+    app.run(
+        host="0.0.0.0",
+        port=port,
+        debug=False
+    )
