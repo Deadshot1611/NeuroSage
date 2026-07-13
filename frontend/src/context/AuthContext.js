@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useCallback } from 'react'
 
-const AUTH_API = process.env.REACT_APP_AUTH_API_URL || 'http://localhost:8002'
+const AUTH_API = process.env.REACT_APP_AUTH_URL || 'http://localhost:8002'
 const TOKEN_KEY = 'neurosage_token'
 const USER_KEY  = 'neurosage_user'
 

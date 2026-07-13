@@ -1,4 +1,4 @@
-const AUTH_API = process.env.REACT_APP_AUTH_API_URL || 'http://localhost:8002';
+const AUTH_API = process.env.REACT_APP_AUTH_URL || 'http://localhost:8002';
 
 export async function saveReport({ module, child_name, child_age, result_json, token }) {
   const effectiveToken = token || localStorage.getItem('neurosage_token');
