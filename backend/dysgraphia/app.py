@@ -11,7 +11,7 @@ Changes from original:
     If GEMINI_API_KEY is absent those two endpoints return graceful errors;
     the core screening flow still works without it.
 """
-
+import traceback
 from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
 import os
@@ -142,8 +142,9 @@ def analyze_image():
         })
 
     except Exception as e:
-        print(f"Error analysing image: {e}")
-        return jsonify({'error': str(e)}), 500
+      print("===== ANALYZE IMAGE ERROR =====")
+      traceback.print_exc()
+      return jsonify({'error': str(e)}), 500
 
 
 # ─────────────────────────────────────────────────────────────────────────────
