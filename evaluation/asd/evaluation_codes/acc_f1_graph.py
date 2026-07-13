@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 # Short codes for x-axis
 MODELS = [
     ("EB0-FM",  "EfficientNet-B0 (FixMaps)",   90.00, 0.8966, "#6366f1"),
-    ("MN-FM",   "MobileNetV3 (FixMaps)",        90.00, 0.9032, "#a5b4fc"),
+    ("MN-FM",   "MobileNetV2 (FixMaps)",        90.00, 0.9032, "#a5b4fc"),
     ("EB0-FP",  "EfficientNet-B0 (FixPts)",     96.67, 0.9655, "#22c55e"),
-    ("MN-FP",   "MobileNetV3 (FixPts)",         86.67, 0.8571, "#86efac"),
+    ("MN-FP",   "MobileNetV2 (FixPts)",         86.67, 0.8571, "#86efac"),
     ("GAT",     "GAT Only",                     90.00, 0.9032, "#f59e0b"),
     ("STAT",    "Stats Only",                   90.00, 0.9091, "#fcd34d"),
     ("G+S",     "GAT + Stats",                  93.33, 0.9333, "#f97316"),
