@@ -117,6 +117,7 @@ def generate_questions():
 @app.route('/api/analyze-image', methods=['POST'])
 def analyze_image():
     """Analyse a handwriting image and return anomaly score."""
+    print("Request received")
     try:
         if 'image' not in request.files:
             return jsonify({'error': 'No image provided'}), 400

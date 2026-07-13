@@ -1,9 +1,12 @@
+import traceback
+
 import torch
 import torch.nn.functional as F
 from PIL import Image
 from torchvision.transforms import Compose, ConvertImageDtype, Pad, Resize, PILToTensor
 from model import EncoderFactory  # <--- Changed from ResnetWrapper
 import os
+
 
 class ImageAnalyzer:
     """Handles handwriting image analysis using the trained model"""
