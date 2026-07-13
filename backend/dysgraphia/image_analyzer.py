@@ -119,5 +119,6 @@ class ImageAnalyzer:
             return anomaly_score
             
         except Exception as e:
-            print(f"Error analyzing image: {e}")
-            return None
+            print("===== IMAGE ANALYZER ERROR =====")
+            traceback.print_exc()
+            raise
