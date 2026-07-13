@@ -99,10 +99,16 @@ class ImageAnalyzer:
             img_w, img_h = img.size
             
             # Transform
+            # transform = Compose([
+            #     PILToTensor(),
+            #     ConvertImageDtype(torch.float),
+            #     Pad((0, 0, self.max_width - img_w, self.max_height - img_h), fill=1.),
+            #     Resize((128, 1024))
+            # ])
+
             transform = Compose([
                 PILToTensor(),
                 ConvertImageDtype(torch.float),
-                Pad((0, 0, self.max_width - img_w, self.max_height - img_h), fill=1.),
                 Resize((128, 1024))
             ])
             
