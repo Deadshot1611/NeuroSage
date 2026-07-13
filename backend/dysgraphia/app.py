@@ -25,11 +25,10 @@ from questionnaire_engine import QuestionnaireEngine
 
 load_dotenv()
 
-app = Flask(__name__)
-CORS(app)
 
-# app = Flask(__name__)
-# CORS(app, resources={r"/api/*": {"origins": "*"}})
+
+app = Flask(__name__)
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # ── Gemini (optional — only for analysis narrative and doctor search) ──────────
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
