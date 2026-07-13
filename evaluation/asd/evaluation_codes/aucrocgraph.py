@@ -30,10 +30,10 @@ OUT_PATH = Path(r'C:\Users\kutus\OneDrive\Documents\autism\models\gaze\roc_curve
 MODELS = [
     # CNN FixMaps
     ("EfficientNet-B0 (FixMaps)",  0.9867, "--",  "#6366f1", 1.6, 3),
-    ("MobileNetV3 (FixMaps)",      0.9556, ":",   "#a5b4fc", 1.6, 3),
+    ("MobileNetV2 (FixMaps)",      0.9556, ":",   "#a5b4fc", 1.6, 3),
     # CNN FixPts
     ("EfficientNet-B0 (FixPts)",   0.9956, "--",  "#22c55e", 1.6, 4),
-    ("MobileNetV3 (FixPts)",       0.9289, ":",   "#86efac", 1.6, 3),
+    ("MobileNetV2 (FixPts)",       0.9289, ":",   "#86efac", 1.6, 3),
     # GAT / Stats ablations
     ("GAT Only",                   0.9689, "--",  "#f59e0b", 1.6, 3),
     ("Stats Only",                 0.9822, ":",   "#fcd34d", 1.6, 3),
@@ -164,11 +164,11 @@ leg_elements = [
     Line2D([0],[0], color='none', lw=0, label=''),
     Line2D([0],[0], color='none', lw=0, label='── CNN FixMaps ──────────────'),
     Line2D([0],[0], color='#6366f1', lw=1.6, ls='--', label='EfficientNet-B0 (FixMaps)  AUC=0.9867'),
-    Line2D([0],[0], color='#a5b4fc', lw=1.6, ls=':',  label='MobileNetV3 (FixMaps)      AUC=0.9556'),
+    Line2D([0],[0], color='#a5b4fc', lw=1.6, ls=':',  label='MobileNetV2 (FixMaps)      AUC=0.9556'),
     Line2D([0],[0], color='none', lw=0, label=''),
     Line2D([0],[0], color='none', lw=0, label='── CNN FixPts ───────────────'),
     Line2D([0],[0], color='#22c55e', lw=1.6, ls='--', label='EfficientNet-B0 (FixPts)   AUC=0.9956'),
-    Line2D([0],[0], color='#86efac', lw=1.6, ls=':',  label='MobileNetV3 (FixPts)       AUC=0.9289'),
+    Line2D([0],[0], color='#86efac', lw=1.6, ls=':',  label='MobileNetV2 (FixPts)       AUC=0.9289'),
     Line2D([0],[0], color='none', lw=0, label=''),
     Line2D([0],[0], color='none', lw=0, label='── GAT / Stats Ablations ────'),
     Line2D([0],[0], color='#f59e0b', lw=1.6, ls='--', label='GAT Only                   AUC=0.9689'),
